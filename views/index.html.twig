@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Report</title>
+</head>
+<body>
+<a href="/?city=Riga">Riga</a> | <a href="/?city=Vilnius">Vilnius</a> | <a href="/?city=Tallinn">Tallinn</a>
+<form class="form" action="/" method="get">
+    <label>
+        <input type="text" placeholder="City..." name="city">
+    </label>
+    <button type="submit">Search</button>
+</form>
+</div>
+<div>
+    <h2>{{ city.getName }}</h2>
+    <span>Temperature: {{ weatherReport.getTemperature }}°C</span>
+    <br>
+    <span>Weather: {{ weatherReport.getWeatherDescription }}</span>
+    <br>
+    <span>Wind speed: {{ weatherReport.getWindSpeed }}m/s</span>
+</body>
+</html>
